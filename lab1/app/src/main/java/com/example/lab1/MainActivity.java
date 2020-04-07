@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             youScores.setText(String.valueOf(cubic1+cubic2+numOfYou));
             int numOfOther = Integer.parseInt(otherScores.getText().toString());
             otherScores.setText(String.valueOf(cubic3+cubic4+numOfOther));
-            if ((Integer.parseInt(youScores.getText().toString())>100) & (Integer.parseInt(youScores.getText().toString())>Integer.parseInt(otherScores.getText().toString()))) {
+            if ((Integer.parseInt(youScores.getText().toString())>=100) & (Integer.parseInt(youScores.getText().toString())>Integer.parseInt(otherScores.getText().toString()))) {
                 text.setText("Брось кубики и набери 100 очков раньше соперника!");
                 youScores.setText("0");
                 otherScores.setText("0");
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(this, Winner.class);
                 startActivity(intent);
             } else
-            if ((Integer.parseInt(otherScores.getText().toString())>100) & (Integer.parseInt(otherScores.getText().toString())>Integer.parseInt(youScores.getText().toString()))) {
+            if ((Integer.parseInt(otherScores.getText().toString())>=100) & (Integer.parseInt(otherScores.getText().toString())>Integer.parseInt(youScores.getText().toString()))) {
                 text.setText("Брось кубики и набери 100 очков раньше соперника!");
                 youScores.setText("0");
                 otherScores.setText("0");
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
             } else
-            if ((Integer.parseInt(youScores.getText().toString())>100) & (Integer.parseInt(youScores.getText().toString())==Integer.parseInt(otherScores.getText().toString()))) {
+            if ((Integer.parseInt(youScores.getText().toString())>=100) & (Integer.parseInt(youScores.getText().toString())==Integer.parseInt(otherScores.getText().toString()))) {
                 text.setText("Брось кубики и набери 100 очков раньше соперника!");
                 youScores.setText("0");
                 otherScores.setText("0");
